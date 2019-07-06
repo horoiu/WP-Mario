@@ -1,0 +1,15 @@
+:root {
+    --green-color: #3eb3a5;
+    --font-black-color: #272727;
+    --font-d-grey-color: #8e8e8e;
+    --font-l-grey-color: #c0c0c0;
+    --circle-grey-color: #ebebeb;
+
+}
+
+body {
+	font-family: rockwell, Arial, sans-serif;
+	letter-spacing: 0.25px;
+}
+
+

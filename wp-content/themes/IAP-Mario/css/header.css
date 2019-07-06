@@ -1,0 +1,39 @@
+
+.site-header {
+    background-color: bisque;
+    height: 86px;
+}
+
+
+.primary-menu ul {
+    list-style: none;
+    float:right;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.primary-menu ul li {
+    display: inline-block;
+}
+.primary-menu ul li a {
+    color: var(--font-l-grey-color);
+    display: inline-block;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 25px 20px;
+}
+
+.primary-menu ul li:nth-child(2) {
+    padding-right: 150px;
+    background-color: yellow;
+}
+.primary-menu ul li:nth-child(3) {
+    padding-left: 150px;
+    background-color: yellow;
+}
+
+.primary-menu ul li a:hover {
+    color: var(--green-color);
+    text-decoration: none;
+}

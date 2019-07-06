@@ -1,0 +1,28 @@
+.site-footer {
+    padding: 30px 0;
+    background-color: bisque;
+}
+
+.footer-info {
+	font-size: 16px;
+	text-align: center;
+	color: var(--font-l-grey-color);
+}
+
+.footer-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--green-color);
+}
+
+.footer-link:visited {
+    text-decoration: none;
+    color: var(--green-color);
+}
+
+.footer-link:hover {
+    text-decoration: none;
+    color: var(--font-d-grey-color);
+}
+
+
