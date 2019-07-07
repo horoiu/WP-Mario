@@ -5,27 +5,32 @@
         <?php wp_head(); ?> 
     </head>
     <body>
+        
+        
+        
+        
         <header class="site-header">
-            <div class="container">
-                <div class="header-hero">
 
-                </div>
+            <!-- Hero background-->
+            <div class="header-hero"></div>
 
-                <!-- Menus -->
+            <!-- Menus -->
+            <div class="container">  
                 <div class="col-sm-9">
-                    <!-- <div class="button">Buton</div> -->
-                    <div class="primary-menu">
-                        <?php 
-                            if ( has_nav_menu( 'primary' ) ) :
-                                wp_nav_menu(array(
-                                    'theme_location' => 'primary',
-                                    'container' => 'nav',
-                                ) );
-                            endif;
-                        ?>
+                    <div class="row">
+                        <!-- <div class="button">Buton</div> -->
+                        <div class="primary-menu">
+                            <?php 
+                                if ( has_nav_menu( 'primary' ) ) :
+                                    wp_nav_menu(array(
+                                        'theme_location' => 'primary',
+                                        'container' => 'nav',
+                                    ) );
+                                endif;
+                            ?>
+                        </div>
                     </div>
                 </div>
-
             </div>
-            <!-- <hr> -->
+            <hr>
         </header>

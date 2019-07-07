@@ -6,20 +6,34 @@
             wp_enqueue_style( 'fontawesome', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), false, 'all' );
 		    wp_enqueue_style( 'bootstrap-grid', get_stylesheet_directory_uri() . '/css/bootstrap-grid.css', array(), false, 'all' );
             wp_enqueue_style( 'main-style', get_stylesheet_uri() , array(), false, 'all' );
+            wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/js/main.js', array( 'jquery' ), false, true );
         };
 
         add_action('wp_enqueue_scripts', 'iap_scripts');
     endif;
 
-    /* Set's the menu entries in the WP Dashboard*/
     if ( ! function_exists( 'iap_setup') ) :
         function iap_setup() {
+
+            /* Set's the menu entries in the WP Dashboard*/
             register_nav_menus(
                 array(
                     'primary' => __('Primary Menu', 'iaptheme'),
                     'secondary' => __('Secondary Menu', 'iaptheme'),
                 )
             );
+
+            // Add support for featured image
+            add_theme_support( 'post-thumbnails' );
+            
+            // Add support for documents titles
+            add_theme_support( 'title-tag' );
+            
+            /* Create image sizes based on our design */
+            add_image_size( 'featured-image', 220, 180 ); 
+            add_image_size( 'featured-image-small', 380, 255, true ); 
+            add_image_size( 'featured-image-sticky', 1200, 350, true ); 
+
         };
         add_action( 'after_setup_theme', 'iap_setup' );
     endif;
