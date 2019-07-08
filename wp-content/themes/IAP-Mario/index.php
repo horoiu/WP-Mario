@@ -18,7 +18,11 @@
                             <span class="post-category__separator-comment-no"> <?php comments_number(); ?></span>
                         </header>
                         <h2><?php the_title(); ?></h2>
-                            <?php the_content(); ?>
+                            <?php 
+                                /*the_content();*/ //shows the full post
+                                the_excerpt(); // show the post Excerpt, the post is truncated
+                            ?> 
+
                         <button class="read-more"><a href="<?php the_permalink(); ?>">Read more</a></button>
                         <p></p>
                     </article>
