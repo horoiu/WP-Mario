@@ -25,6 +25,7 @@
                                     wp_nav_menu(array(
                                         'theme_location' => 'primary',
                                         'container' => 'nav',
+                                        'depth' => '4',
                                     ) );
                                 endif;
                             ?>

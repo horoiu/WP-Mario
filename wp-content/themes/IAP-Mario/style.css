@@ -52,7 +52,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 
 @import url('css/normalize.css');
-/* @import url('css/bootstrap-grid.css'); */
+@import url('css/bootstrap-grid.css');
 @import url('css/tools.css');
 
 @import url('css/header.css');
@@ -73,3 +73,4 @@ Use it to make something cool, have fun, and share what you've learned with othe
     font-style: normal;
   }
 
+ 
