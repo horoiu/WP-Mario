@@ -1,0 +1,22 @@
+.error-404 {
+	text-align: center;
+}
+.error-404 h1 {
+    position: relative;
+    font-size: 120px;
+    margin-bottom: 0;
+    line-height: 95px;
+    bottom: 70px;
+}
+.error-404 p {
+    position: relative;
+    width: 50%;
+    background-color: yellow;
+    margin: 0 auto;
+    bottom: 50px;
+}
+
+.container {
+    height: 65%;
+
+}

@@ -16,7 +16,7 @@
 
 .primary-menu {
     background-color: #fff;
-    height: 86px;
+    /* height: 60px; */
     margin: 0 auto;
 }
 
@@ -81,50 +81,46 @@
 /* Sub-Menu */
 
 ul.menu ul {
-    display:none;
+    display: none;
 }
 
 ul.menu li:hover {
-    z-index:999;
+    z-index: 999;
 }
 
 ul.menu li:hover > ul {
-    display:block;
-    position:absolute;
-    float:left;
+    display: block;
+    position: absolute;
+    float: left;
 }
 
 ul.menu li {
-    float:left;
-    width:auto;
+    float: left;
+    width: auto;
 }
 ul.menu ul li {
-    float:left;
-    width:190px;
-    /* background-color: yellow; */
+    float: left;
+    width: 190px;
 }
 
 ul.sub-menu {
     background-color: #fff;
     border: 2px solid var(--circle-grey-color);
     border-radius: 10px;
-    /* box-shadow: 4px 4px 5px 4px rgba(214,211,214,1); */
     box-shadow: 3px 2px 13px 2px #aaaaaa;
 }
 
 ul.menu ul li ul {
-    float:left;
-    width:180px;
-    position:absolute;
-    left:100%;
-    top:0;
-    /* background-color: blue; */
+    float: left;
+    width: 180px;
+    position: absolute;
+    left: 100%;
+    top: 0;
 }
 
 ul.sub-menu li {
     border-bottom: 1px solid var(--circle-grey-color);
     width: 100%;
-    /* bottom: 15px; */
     padding-top: 5px;
 }
 
@@ -148,104 +144,3 @@ ul.sub-menu > li.menu-item-has-children:after {
     font-weight: bold;
     color: var(--green-color);
 }
-
-
-
-    
-    /*  */
-    /* Original code */
-    /* ul.menu,ul.menu ul,ul.menu li,ul.menu a {
-        display:block;
-        margin:0;
-        padding:0;
-        }
-        
-        ul.menu ul {
-        display:none;
-        }
-        ul.menu li:hover {
-        z-index:999;
-        }
-        ul.menu li:hover > ul {
-        display:block;
-        position:absolute;
-        float:left;
-        }
-        ul.menu li {
-        float:left;
-        width:auto;
-        }
-        ul.menu ul li {
-        float:left;
-        width:190px;
-        }
-        ul.menu ul li ul {
-        float:left;
-        width:190px;
-        position:absolute;
-        left:100%;
-        top:0;
-        }
-        ul.menu-ver,ul.menu-ver ul {
-        width:14em;
-        }
-        
-        div.menu-center ul.menu {
-        float:left;
-        position:relative;
-        left:50%;
-        }
-        
-        div.menu-center ul.menu li {
-        position:relative;
-        left:-50%;
-        }
-        
-        div.menu-center ul.menu li li {
-        left:auto;
-        }
-        
-        
-        ul.menu li a {
-        border-bottom:1px outset ghostwhite;
-        }
-        
-        ul.menu li a {
-        padding:8px 12px 10px;
-        }
-        
-        ul.menu li a:link,ul.menu li a:hover,ul.menu li a:visited,ul.menu li a:active {
-        text-decoration:none;
-        border-bottom:1px outset black;
-        }
-        
-        
-        ul.menu li {
-        background: #45484d;
-        background: -moz-linear-gradient(top, #45484d 0%, #000000 100%);
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(100%,#000000));
-        background: -webkit-linear-gradient(top, #45484d 0%,#000000 100%);
-        background: -o-linear-gradient(top, #45484d 0%,#000000 100%);
-        background: -ms-linear-gradient(top, #45484d 0%,#000000 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 );
-        background: linear-gradient(top, #45484d 0%,#000000 100%);
-        }
-        .menu-center {
-        float:right;
-        margin-right:95px;
-        }
-        
-        ul.menu li a{
-        color:ghostwhite;
-        }
-        ul.menu li a:hover {
-        background: #efefef;
-        background: -moz-linear-gradient(top, #efefef 0%, #ffffff 100%);
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(100%,#ffffff));
-        background: -webkit-linear-gradient(top, #efefef 0%,#ffffff 100%);
-        background: -o-linear-gradient(top, #efefef 0%,#ffffff 100%);
-        background: -ms-linear-gradient(top, #efefef 0%,#ffffff 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#ffffff',GradientType=0 );
-        background: linear-gradient(top, #efefef 0%,#ffffff 100%);
-        color:black;
-        } */
