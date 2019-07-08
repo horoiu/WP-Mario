@@ -5,10 +5,6 @@
         <?php wp_head(); ?> 
     </head>
     <body>
-        
-        
-        
-        
         <header class="site-header">
 
             <!-- Hero background-->
@@ -34,4 +30,6 @@
                 </div>
             </div>
             <hr>
+
+            
         </header>

@@ -3,7 +3,7 @@
     /* Loads the stylesheets & files */
     if ( ! function_exists( 'iap_scripts' ) ) :
         function iap_scripts() {
-            wp_enqueue_style( 'fontawesome', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), false, 'all' );
+            wp_enqueue_style( 'fontawesome', 'https://use.fontawesome.com/releases/v5.6.3/css/all.css', array(), false, 'all' );
 		    wp_enqueue_style( 'bootstrap-grid', get_stylesheet_directory_uri() . '/css/bootstrap-grid.css', array(), false, 'all' );
             wp_enqueue_style( 'main-style', get_stylesheet_uri() , array(), false, 'all' );
             wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/js/main.js', array( 'jquery' ), false, true );

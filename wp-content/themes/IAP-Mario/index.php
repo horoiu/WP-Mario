@@ -1,11 +1,33 @@
-<?php get_header();
+<?php get_header(); ?>
 
-    while(have_posts()) {
-        the_post(); ?>
-        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-        <?php the_content(); ?>
-        <hr> 
-    <?php }
-
-    get_footer();
-?>
+    <div id="primary" class="container content-area">
+        <main class="site-main row" role="main">
+            <?php 
+            
+            $i=0;
+            if (have_posts()) :
+                while (have_posts()): the_post(); ?>
+                    <article id="post-<?php the_ID(); ?>" <?php post_class('bottom-margin'); ?> >
+                        <header class="article-header">
+                            <span class="post-category">cat : <?php the_category(); ?></span>
+                            <span class="post-category__separator-line">|</span>
+                            <i class="post-category__separator-likes fas fa-heart"></i>
+                            <span class="post-category__separator-likes-no"> xxx Likes</span>
+                            <span class="post-category__separator-line">|</span>
+                            <i class="post-category__separator-comment fas fa-comment-alt"></i>
+                            <span class="post-category__separator-comment-no"> <?php comments_number(); ?></span>
+                        </header>
+                        <h2><?php the_title(); ?></h2>
+                            <?php the_content(); ?>
+                        <button class="read-more"><a href="<?php the_permalink(); ?>">Read more</a></button>
+                        <p></p>
+                    </article>
+            <?php 
+                endwhile;
+                else :
+                    echo _e( 'There are no articles to show', 'iap' );
+                endif; ?>
+        </main>
+    </div>
+                    
+<?php get_footer(); ?>
