@@ -9,6 +9,7 @@ main.site-main.row {
     border-bottom: 2px dashed var(--circle-grey-color);
 }
 
+/* Welcome message */
 main.site-main p.welcome-msg {
     color: var(--font-d-grey-color); 
     font-weight: bold;
@@ -21,13 +22,17 @@ p.welcome-msg p.fa-grip-lines {
     text-align: center;
 }
 
+/* Post header */
 .article-header {
+    /* width: 110%; */
     border-bottom: 1px solid var(--circle-grey-color);
+    margin-left: -10px;
 }
 
 .post-category {
     text-decoration: none;
     color: var(--font-l-grey-color);
+    margin-left: 10px;
 }
 
 ul.post-categories {
@@ -35,7 +40,6 @@ ul.post-categories {
     list-style: none;
     margin: 20px auto;
     margin-left: -38px;
-    /* background-color: yellow; */
 }
 
 ul.post-categories a {
@@ -83,10 +87,12 @@ article.post h2 a {
     font-size: 22px;
 }
 
-article.post p {
+article.post>p {
     color: var(--font-d-grey-color);
     font-size: 12px;
 }
+
+/* Read More button  */
 button.read-more {
     background-color: white;
     border: 0;
@@ -96,10 +102,30 @@ button.read-more a {
     font-size: 11px;
     font-weight: bold;
     text-decoration: underline;
-    border: 0px;
+    border: 0;
     margin-left: -7px;
 }
 
 button.read-more a:focus {
     outline: none;
+}
+
+/* Post Date in circle */
+.post-meta__date>p {
+    color: var(--green-color);
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+}
+
+.post-meta__date {
+    position: absolute;
+    margin-left: -135px;
+    margin-top: -60px;
+    padding: 25px 0;
+    width: 125px;
+    max-height: 125px;
+    border: 7px solid var(--circle-grey-color);
+    border-radius: 67.5px;
 }

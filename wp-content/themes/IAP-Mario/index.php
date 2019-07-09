@@ -26,14 +26,19 @@
                             <i class="post-category__separator-comment fas fa-comment-alt"></i>
                             <span class="post-category__separator-comment-no"> <?php comments_number(); ?></span>
                         </header>
+                        <div class="container post-meta__date">
+                            <p class="post-meta__date-d-m"><?php echo get_the_date('d M'); ?></p>
+                            <p class="post-meta__date-y"><?php echo get_the_date('Y'); ?></p>
+                        </div>
                         <h2><?php the_title(); ?></h2>
-                            <?php 
+                            <?php
                                 /*the_content();*/ //shows the full post
                                 the_excerpt(); // show the post Excerpt, the post is truncated
                             ?> 
 
                         <button class="read-more"><a href="<?php the_permalink(); ?>">Read more</a></button>
                         <p></p>
+                        
                     </article>
             <?php 
                 endwhile;
