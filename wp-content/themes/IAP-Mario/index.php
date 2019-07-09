@@ -3,6 +3,15 @@
     <div id="primary" class="container content-area">
         <main class="site-main row" role="main">
             <?php 
+                $name = '';
+                if (get_the_author_meta('display_name')) { 
+                    $name = get_the_author_meta('display_name', $auth_id); }
+                else {
+                    $name = 'Stranger';
+                }; ?>
+                <p class="welcome-msg">Hello <?php echo $name; ?>, Welcome to my Blog!</p>
+                <i class="welcome-msg__lines fas fa-grip-lines"></i>
+            <?php 
             
             $i=0;
             if (have_posts()) :

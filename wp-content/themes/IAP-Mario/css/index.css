@@ -9,6 +9,18 @@ main.site-main.row {
     border-bottom: 2px dashed var(--circle-grey-color);
 }
 
+main.site-main p.welcome-msg {
+    color: var(--font-d-grey-color); 
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+}
+
+p.welcome-msg p.fa-grip-lines {
+    color: var(--font-d-grey-color); 
+    text-align: center;
+}
+
 .article-header {
     border-bottom: 1px solid var(--circle-grey-color);
 }
