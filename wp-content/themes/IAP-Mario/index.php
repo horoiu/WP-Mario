@@ -33,15 +33,16 @@
                         <h2><?php the_title(); ?></h2>
                             <?php
                                 /*the_content();*/ //shows the full post
-                                the_excerpt(); // show the post Excerpt, the post is truncated
+                                the_excerpt(); // show the post Excerpt, aka the post is truncated
                             ?> 
 
-                        <button class="read-more"><a href="<?php the_permalink(); ?>">Read more</a></button>
-                        <p></p>
-                        
+                        <button class="read-more"><a href="<?php the_permalink(); ?>">Read More</a></button>
                     </article>
-            <?php 
-                endwhile;
+                    
+                    <?php 
+                endwhile; ?>
+                <button class="load-more"><a href="<?php ; ?>">Load More</a></button>
+                <?php
                 else :
                     echo _e( 'There are no articles to show', 'iap' );
                 endif; ?>
