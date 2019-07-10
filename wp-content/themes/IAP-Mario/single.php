@@ -5,7 +5,7 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-sm-8 content-area">
+                <!-- <div class="col-sm-8 content-area"> -->
                     <?php
                         // Start the loop.
                         while ( have_posts() ) : the_post(); 

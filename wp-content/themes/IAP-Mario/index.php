@@ -41,7 +41,7 @@
                     
                     <?php 
                 endwhile; ?>
-                <button class="load-more"><a href="<?php ; ?>">Load More</a></button>
+                <button class="load-more">Load More</button>
                 <?php
                 else :
                     echo _e( 'There are no articles to show', 'iap' );
