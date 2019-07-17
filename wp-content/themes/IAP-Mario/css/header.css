@@ -16,8 +16,8 @@
 
 .primary-menu {
     background-color: #fff;
-    /* height: 60px; */
     margin: 0 auto;
+    text-align: center;
 }
 
 .primary-menu ul {
@@ -30,8 +30,9 @@
 
 .primary-menu ul li {
     display: inline-block;
-    position:relative;
+    position: relative;
 }
+
 .primary-menu ul li a {
     color: var(--font-l-grey-color);
     display: inline-block;
@@ -46,6 +47,29 @@
     text-decoration: none;
     color: var(--green-color);
 }
+
+/* hide main menu item, but keep the space to show the Avatar */
+.primary-menu ul.menu>li:nth-child(3) a {
+    visibility: hidden;
+}  
+
+/* Main Menu Avatar*/
+div.header-menu-avatar {
+    margin: 0;
+    width: 160px;
+    height: 160px;
+    background-image: url(../img/myAvatar.svg);
+    background-color: var(--green-color);
+    background-size: contain;
+    position: absolute;
+    top: -23px;
+    left: 420px;
+    border-radius: 50%;
+    border: 6px solid white;
+}
+
+
+
 
 
 /* Underline hovered or selected menu item */
@@ -84,9 +108,9 @@ ul.menu ul {
     display: none;
 }
 
-ul.menu li:hover {
+/* ul.menu li:hover {
     z-index: 999;
-}
+} */
 
 ul.menu li:hover > ul {
     display: block;

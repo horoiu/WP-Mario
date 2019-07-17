@@ -1,0 +1,18 @@
+section {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+span>button.next-stories {
+    float: right;
+    background-color: var(--green-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+footer.single-post__footer span {
+    margin-bottom: 30px;
+    background-color: yellow;
+}

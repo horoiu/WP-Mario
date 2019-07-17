@@ -13,15 +13,18 @@ jQuery(function($){ // use jQuery code inside this to avoid "$ is not defined" e
 		};
  
 		$.ajax({ // you can also use $.post here
-			// url : loadmore_params.ajaxurl, // AJAX handler
-			url : '/wp-admin/admin-ajax.php', // AJAX handler
+			url : loadmore_params.ajaxurl, // AJAX handler
+			// url : 'http://iapmario.local/wp-admin/admin-ajax.php', // AJAX handler
 			data : data,
 			type : 'POST',
 			beforeSend : function ( xhr ) {
 				button.text('Loading...'); // change the button text, you can also add a preloader image
 			},
 			success : function( data ){
+				console.log(data);
+				console.log('before if');
 				if( data ) { 
+					console.log('data');
 					button.text( 'More posts' ).prev().before(data); // insert new posts
 					loadmore_params.current_page++;
  

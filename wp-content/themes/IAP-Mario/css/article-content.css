@@ -1,0 +1,112 @@
+/* Post Date in circle */
+.post-meta__date>span {
+    color: var(--green-color);
+    font-size: 30px;
+    font-weight: bold;
+    display: block;
+    margin: -10px 0 5px 0;
+    text-align: center;
+}
+
+.post-meta__date {
+    position: absolute;
+    /* margin-left: 20px; */
+    margin-top: -20px;
+    padding: 25px 0;
+    width: 125px;
+    max-height: 125px;
+    border: 7px solid var(--circle-grey-color);
+    border-radius: 67.5px;
+}
+
+.article {
+    width: 940px;
+    /* position: relative; */
+    margin-top: 40px;
+    padding-left: 130px;
+}
+
+/* /Post-Article header */
+.article-header {
+    border-bottom: 1px solid var(--circle-grey-color);
+    margin-left: -10px;
+}
+
+.post-category {
+    text-decoration: none;
+    color: var(--font-l-grey-color);
+    margin-left: 10px;
+}
+
+.post-category a {
+    text-decoration: none;
+    color: var(--green-color);
+}
+
+.post-category a:hover {
+    font-weight: bold;
+}
+
+ul.post-categories {
+    display: inline-block;
+    list-style: none;
+    margin: 20px auto;
+    margin-left: -38px;
+}
+
+.post-category__separator-line {
+    color: var(--circle-grey-color);
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.post-category__separator-likes {
+    color: var(--green-color);
+}
+
+.post-category__separator-comment {
+    color: var(--green-color);
+    transform: rotateY(180deg);
+}
+
+span.post-category__separator-likes-no,
+span.post-category__separator-comment-no {
+    color: var(--font-l-grey-color);
+}
+
+article.post h2 a {
+    color: var(--font-black-color);
+    font-size: 30px;
+}
+
+article.post>p {
+    color: var(--font-d-grey-color);
+    font-size: 16px;
+}
+
+/* Button Read-More */
+button.read-more {
+    background-color: white;
+    border: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--circle-grey-color);
+}
+
+button.read-more a {
+    color: var(--green-color);
+    font-size: 16px;
+    font-weight: bold;
+    border: 0;
+    margin-left: -7px;
+}
+
+button.read-more a:hover {
+    text-decoration: none;
+    color: var(--font-d-grey-color);
+}
+
+button.read-more a:focus {
+    outline: none;
+}
+
+

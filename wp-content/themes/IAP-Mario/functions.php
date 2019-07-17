@@ -81,7 +81,7 @@ function my_load_more_scripts() {
 	// we have to pass parameters to myloadmore.js script but we can get the parameters values only in PHP
 	// you can define variables directly in your HTML but I decided that the most proper way is wp_localize_script()
 	wp_localize_script( 'my_loadmore', 'loadmore_params', array(
-		'ajaxurl' => site_url() . '/wp-admin/admin-ajax.php', // WordPress AJAX
+		'ajaxurl' => admin_url('admin-ajax.php'), // WordPress AJAX
 		'posts' => json_encode( $wp_query->query_vars ), // everything about your loop is here
 		'current_page' => get_query_var( 'paged' ) ? get_query_var('paged') : 1,
 		'max_page' => $wp_query->max_num_pages
@@ -110,10 +110,8 @@ function loadmore_ajax_handler(){
  
 			// look into your theme code how the posts are inserted, but you can use your own HTML of course
 			// do you remember? - my example is adapted for Twenty Seventeen theme
-			get_template_part( 'template-parts/post/content', get_post_format() );
+			get_template_part( 'template-parts/article-content' );
 			// for the test purposes comment the line above and uncomment the below one
-			// the_title();
- 
  
 		endwhile;
  

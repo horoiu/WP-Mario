@@ -9,44 +9,22 @@
                 else {
                     $name = 'Stranger';
                 }; ?>
-                <p class="welcome-msg">Hello <?php echo $name; ?>, Welcome to my Blog!</p>
-                <i class="welcome-msg__lines fas fa-grip-lines"></i>
+                <div class="welcome-msg">
+                    <p class="welcome-msg__text">Hello <?php echo $name; ?>, Welcome to my Blog!</p>
+                    <i class="welcome-msg__lines fas fa-grip-lines"></i>
+                </div>
             <?php 
             
             $i=0;
             if (have_posts()) :
-                while (have_posts()): the_post(); ?>
-                    <article id="post-<?php the_ID(); ?>" <?php post_class('bottom-margin'); ?> >
-                        <header class="article-header">
-                            <span class="post-category">cat : <?php the_category(); ?></span>
-                            <span class="post-category__separator-line">|</span>
-                            <i class="post-category__separator-likes fas fa-heart"></i>
-                            <span class="post-category__separator-likes-no"> xxx Likes</span>
-                            <span class="post-category__separator-line">|</span>
-                            <i class="post-category__separator-comment fas fa-comment-alt"></i>
-                            <span class="post-category__separator-comment-no"> <?php comments_number(); ?></span>
-                        </header>
-                        <div class="container post-meta__date">
-                            <p class="post-meta__date-d-m"><?php echo get_the_date('d M'); ?></p>
-                            <p class="post-meta__date-y"><?php echo get_the_date('Y'); ?></p>
-                        </div>
-                        <h2><?php the_title(); ?></h2>
-                            <?php
-                                /*the_content();*/ //shows the full post
-                                the_excerpt(); // show the post Excerpt, aka the post is truncated
-                            ?> 
-
-                        <button class="read-more"><a href="<?php the_permalink(); ?>">Read More</a></button>
-                    </article>
-                    
-                    <?php 
-                endwhile; ?>
-                <button class="load-more">Load More</button>
-                <?php
-                else :
-                    echo _e( 'There are no articles to show', 'iap' );
-                endif; ?>
+                while (have_posts()): the_post();
+                    get_template_part( 'template-parts/article-content' ); 
+                endwhile;
+            else :
+                _e( 'There are no articles to show', 'iap' );
+            endif; ?>
         </main>
+        <button class="load-more">Load More</button>
     </div>
                     
 <?php get_footer(); ?>

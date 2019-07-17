@@ -58,6 +58,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import url('css/header.css');
 @import url('css/footer.css');
 @import url('css/index.css');
+@import url('css/single.css');
+@import url('css/article-content.css');
 
 @import url('css/404.css');
 

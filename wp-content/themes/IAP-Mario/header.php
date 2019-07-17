@@ -25,6 +25,7 @@
                                     ) );
                                 endif;
                             ?>
+                            <div class="header-menu-avatar"></div>
                         </div>
                     </div>
                 </div>
