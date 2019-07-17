@@ -3,15 +3,6 @@ main.site-main {
     margin: 0 auto;
 }
 
-/* main.site-main.row {
-    position: relative;
-    max-width: 940px;
-    margin-left: 100px;
-} */
-
-.bottom-margin {
-    border-bottom: 2px dashed var(--circle-grey-color);
-}
 
 /* Welcome message */
 div.welcome-msg {

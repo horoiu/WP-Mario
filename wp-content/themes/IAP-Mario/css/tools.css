@@ -12,5 +12,19 @@ body {
 	letter-spacing: 0.25px;
 }
 
+section {
+    max-width: 960px;
+    margin: 0 auto;
+}
 
+.bottom-margin {
+    border-bottom: 2px dashed var(--circle-grey-color);
+}
 
+.container {
+    height: 65%;
+}
+
+.margin-left {
+    margin-left: 150px;
+}

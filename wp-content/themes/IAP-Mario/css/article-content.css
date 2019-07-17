@@ -79,7 +79,7 @@ article.post h2 a {
     font-size: 30px;
 }
 
-article.post>p {
+article>div.article p {
     color: var(--font-d-grey-color);
     font-size: 16px;
 }
@@ -108,5 +108,3 @@ button.read-more a:hover {
 button.read-more a:focus {
     outline: none;
 }
-
-
