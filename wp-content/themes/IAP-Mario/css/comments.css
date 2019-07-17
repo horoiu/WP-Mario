@@ -1,0 +1,23 @@
+#comments {
+    position: relative;
+    width: 940px;
+    text-align: center;
+}
+
+#respond {
+    border-bottom: 2px solid var(--circle-grey-color);
+
+}
+
+.logged-in-as a,
+.logged-in-as a:visited {
+    text-decoration: none;
+    color: var(--font-d-grey-color);
+}
+
+.logged-in-as a:hover,
+.logged-in-as a:active {
+    text-decoration: none;
+    color: var(--green-color);
+    font-weight: bold;
+}

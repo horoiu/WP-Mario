@@ -31,8 +31,8 @@
             
             /* Create image sizes based on our design */
             add_image_size( 'featured-image', 220, 180 ); 
-            add_image_size( 'featured-image-small', 730, 480, true ); 
-            add_image_size( 'featured-image-sticky', 1200, 350, true ); 
+            add_image_size( 'featured-image-small', 730, 480 ); 
+            add_image_size( 'featured-image-sticky', 1200, 350 ); 
 
         };
         add_action( 'after_setup_theme', 'iap_setup' );

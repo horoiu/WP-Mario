@@ -39,7 +39,7 @@
                         </article>
                     <?php
                         if ( comments_open() || get_comments_number() ) {
-                            // comments_template();
+                            comments_template();
                         }
                         endwhile; 
                     ?>
