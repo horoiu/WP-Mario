@@ -10,7 +10,6 @@
 
 .post-meta__date {
     position: absolute;
-    /* margin-left: 20px; */
     margin-top: -20px;
     padding: 25px 0;
     width: 125px;
@@ -21,7 +20,6 @@
 
 .article {
     width: 940px;
-    /* position: relative; */
     margin-top: 40px;
     padding-left: 130px;
 }
@@ -105,6 +103,6 @@ button.read-more a:hover {
     color: var(--font-d-grey-color);
 }
 
-button.read-more a:focus {
+button.read-more:focus {
     outline: none;
 }

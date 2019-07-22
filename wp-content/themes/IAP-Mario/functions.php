@@ -12,6 +12,7 @@
         add_action('wp_enqueue_scripts', 'iap_scripts');
     endif;
 
+    
     if ( ! function_exists( 'iap_setup') ) :
         function iap_setup() {
 
@@ -38,31 +39,34 @@
         add_action( 'after_setup_theme', 'iap_setup' );
     endif;
 
-    /* Add footer copyright years; gets the year from first and last posts */
-    /* Function called from footer.php */
-    function copyright_years() {
-        global $wpdb;
-        $copyright_dates = $wpdb->get_results("
-            SELECT
-            YEAR(min(post_date_gmt)) AS firstdate,
-            YEAR(max(post_date_gmt)) AS lastdate
-            FROM
-            $wpdb->posts
-            WHERE
-            post_status = 'publish'
-            ");
-        $output = '';
-        $auth = '<a class="footer-link" href="https://devspace.ro" target="_blank">Mario</a>';
-        $link = '<a class="footer-link" href="https://devspace.ro" target="_blank">DevSpace.ro</a>';
-        if($copyright_dates) {
-            $copyright = "&copy; All rights reserved to " . $auth . " & " . $link . ", " . $copyright_dates[0]->firstdate;
-            if($copyright_dates[0]->firstdate != $copyright_dates[0]->lastdate) {
-                $copyright .= '-' . $copyright_dates[0]->lastdate;
-            }
-            $output = $copyright . ".";
+
+
+/* Add footer copyright years; gets the year from first and last posts */
+/* Function called from footer.php */
+function copyright_years() {
+    global $wpdb;
+    $copyright_dates = $wpdb->get_results("
+        SELECT
+        YEAR(min(post_date_gmt)) AS firstdate,
+        YEAR(max(post_date_gmt)) AS lastdate
+        FROM
+        $wpdb->posts
+        WHERE
+        post_status = 'publish'
+        ");
+    $output = '';
+    $auth = '<a class="footer-link" href="https://devspace.ro" target="_blank">Mario</a>';
+    $link = '<a class="footer-link" href="https://devspace.ro" target="_blank">DevSpace.ro</a>';
+    if($copyright_dates) {
+        $copyright = "&copy; All rights reserved to " . $auth . " & " . $link . ", " . $copyright_dates[0]->firstdate;
+        if($copyright_dates[0]->firstdate != $copyright_dates[0]->lastdate) {
+            $copyright .= '-' . $copyright_dates[0]->lastdate;
         }
-        return $output;
-    };
+        $output = $copyright . ".";
+    }
+    return $output;
+};
+
 
 
 
@@ -89,8 +93,10 @@ function my_load_more_scripts() {
  
  	wp_enqueue_script( 'my_loadmore' );
 }
- 
 add_action( 'wp_enqueue_scripts', 'my_load_more_scripts' );
+
+
+
 
 // AJAS function for Load-More button
 function loadmore_ajax_handler(){
@@ -118,6 +124,29 @@ function loadmore_ajax_handler(){
 	endif;
 	die; // here we exit the script and even no wp_reset_query() required!
 }
- 
 add_action('wp_ajax_loadmore', 'loadmore_ajax_handler'); // wp_ajax_{action}
 add_action('wp_ajax_nopriv_loadmore', 'loadmore_ajax_handler'); // wp_ajax_nopriv_{action}
+
+
+
+
+// Change Comment form defaults
+// add_filter('comment_form_defaults', 'comm_fields');
+
+// function comm_fields () {
+//     $fields = array(
+//                     'author' => '<p class="comment-form-author">' . '<label for="author">' . __( 'Name' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) .
+//                                 '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>',
+//                     'email'  => '<p class="comment-form-email"><label for="email">' . __( 'Email' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) .
+//                                 '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>',
+//                     'url'    => '<p class="comment-form-url"><label for="url">' . __( 'Website' ) . '</label>' .
+//                                 '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></p>',
+
+//     );
+//     return $fields;  
+// }
+
+
+// add_filter( $filter, 'sanitize_text_field' );
+// add_filter( $filter, 'wp_filter_kses' );
+// add_filter( $filter, '_wp_specialchars', 30 );

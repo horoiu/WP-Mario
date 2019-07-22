@@ -108,9 +108,9 @@ ul.menu ul {
     display: none;
 }
 
-/* ul.menu li:hover {
+ul.menu li:hover {
     z-index: 999;
-} */
+}
 
 ul.menu li:hover > ul {
     display: block;
