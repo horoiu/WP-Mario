@@ -79,45 +79,81 @@ ol.comment-list {
     list-style: none;
 }
 
+li.comment {
+    margin-bottom: 30px;
+}
+
 .says,
 .commentmetadata {
     display: none;
 }
 
-.avatar-120 {
-    border-radius: 50%;
-    position: relative;
-    right: 50%;
-    transform: translateX(50%);
+div.comment-body {
+    margin-bottom: 30px; 
 }
 
-cite.fn {
+div.vcard {
+    text-align: left;
+    /* background-color: yellow; */
+}
+
+ol.comment-list {
+    padding-left: 0;
+}
+
+.avatar-120 {
+    border-radius: 50%;
+    background-color: var(--circle-grey-color);
+    margin-right: 16px;
+}
+
+cite.fn,
+cite.fn a:link,
+cite.fn a:visited {
+    font-style: initial; 
     font-size: 24px;
     font-weight: bold;
     color: var(--green-color);
-    font-style: initial; 
-    position: relative;
-    right: 40%;
-    transform: translateX(50%);
+}
+
+cite.fn a:hover,
+cite.fn a:active,
+cite.fn a:focus {
+    outline: none;
+    text-decoration: none;
 }
 
 div.comment-body p {
     background-color: var(--circle-grey-color);
     color: var(--font-com-color);
     width: 610px;
-    margin-left: 120px;
-    margin-top: -20px;
     border-radius: 5px;
-    padding: 15px 10px;
+    margin-left: 140px;
+    margin-top: -35px;
+    padding: 15px 20px;
+    text-align: justify;
 }
 
-.comment-reply-link {
+div.reply {
+    position: relative;
+    width: 50px;
+    margin-left: 150px;
+}
+
+.comment-reply-link:link,
+.comment-reply-link:visited {
     color: var(--green-color);
     font-size: 16px;
-    position: relative;
-    right: 32%;
 }
 
-li.comment {
-    margin-bottom: 30px;
+.comment-reply-link:hover,
+.comment-reply-link:active {
+    font-weight: bold;
+    text-decoration: none;
+    outline: none;
+}
+
+ul.children {
+    position: relative;
+    margin-left: 50px;
 }

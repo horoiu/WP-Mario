@@ -29,3 +29,7 @@ section {
 .margin-left {
     margin-left: 150px;
 }
+
+ol, ul {
+    list-style-type: none;
+}
